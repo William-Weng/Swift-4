@@ -15,6 +15,8 @@
 		64584FE5208B3EC200F39489 /* WWBaseHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584FE2208B3EC200F39489 /* WWBaseHUDViewController.swift */; };
 		64584FE6208B3EC200F39489 /* WWBaseHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584FE3208B3EC200F39489 /* WWBaseHUD.swift */; };
 		64584FE7208B3EC200F39489 /* WWBaseHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64584FE4208B3EC200F39489 /* WWBaseHUDViewController.xib */; };
+		64584FEB208B51CA00F39489 /* WWBaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64584FE9208B51CA00F39489 /* WWBaseUIView.swift */; };
+		64584FEC208B51CA00F39489 /* WWBaseUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64584FEA208B51CA00F39489 /* WWBaseUIView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		64584FE2208B3EC200F39489 /* WWBaseHUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWBaseHUDViewController.swift; sourceTree = "<group>"; };
 		64584FE3208B3EC200F39489 /* WWBaseHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWBaseHUD.swift; sourceTree = "<group>"; };
 		64584FE4208B3EC200F39489 /* WWBaseHUDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WWBaseHUDViewController.xib; sourceTree = "<group>"; };
+		64584FE9208B51CA00F39489 /* WWBaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWBaseUIView.swift; sourceTree = "<group>"; };
+		64584FEA208B51CA00F39489 /* WWBaseUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WWBaseUIView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				64584FE3208B3EC200F39489 /* WWBaseHUD.swift */,
 				64584FE2208B3EC200F39489 /* WWBaseHUDViewController.swift */,
 				64584FE4208B3EC200F39489 /* WWBaseHUDViewController.xib */,
+				64584FE9208B51CA00F39489 /* WWBaseUIView.swift */,
+				64584FEA208B51CA00F39489 /* WWBaseUIView.xib */,
 			);
 			path = WWBaseHUD;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 				64584FDB208B3EB100F39489 /* LaunchScreen.storyboard in Resources */,
 				64584FE7208B3EC200F39489 /* WWBaseHUDViewController.xib in Resources */,
 				64584FD8208B3EB100F39489 /* Assets.xcassets in Resources */,
+				64584FEC208B51CA00F39489 /* WWBaseUIView.xib in Resources */,
 				64584FD6208B3EAE00F39489 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +164,7 @@
 				64584FD3208B3EAE00F39489 /* ViewController.swift in Sources */,
 				64584FE5208B3EC200F39489 /* WWBaseHUDViewController.swift in Sources */,
 				64584FD1208B3EAE00F39489 /* AppDelegate.swift in Sources */,
+				64584FEB208B51CA00F39489 /* WWBaseUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

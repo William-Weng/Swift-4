@@ -29,6 +29,7 @@ class WWBaseHUD: NSObject {
     
     /// 顯示HUD
     func show() {
+        
         UIView.animate(withDuration: self.windowDuration.show) {
             self.newWindow.alpha = self.windowAlpha.show
         }
@@ -48,12 +49,15 @@ extension WWBaseHUD {
     fileprivate func hudWindow() -> UIWindow {
         
         let newWindow = UIWindow.init(frame: windowFrame)
-        
+        let baseUIView = WWBaseUIView.init(frame: CGRect.init(x: 0, y: 0, width: 50, height: 50))
+
         newWindow.alpha = windowAlpha.hide
         newWindow.windowLevel = UIWindowLevelAlert + 1000
         newWindow.backgroundColor = .clear
         newWindow.rootViewController = WWBaseHUDViewController()
         newWindow.makeKeyAndVisible()
+        
+        newWindow.addSubview(baseUIView)
         
         return newWindow
     }
