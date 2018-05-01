@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CAShapeLayer_Animation
 //
-//  Created by IIT-翁禹斌(William.Weng) on 2018/4/27.
-//  Copyright © 2018年 IIT-翁禹斌(William.Weng). All rights reserved.
+//  Created by William-Weng on 2018/2/10.
+//  Copyright © 2018年 William-Weng. All rights reserved.
 //
 
 import UIKit
