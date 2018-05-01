@@ -11,3 +11,6 @@
 
 ## WWBaseHUD - 利用UIWindow仿製一個HUD
 ![WWBaseHUD - 利用UIWindow仿製一個HUD](./WWBaseHUD.gif)
+
+## CAShapeLayer_Animation - 簡單的動畫加上IBDesignable
+![CAShapeLayer_Animation - 簡單的動畫加上IBDesignable](./CAShapeLayer_Animation.gif)
