@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="crayon_1-1.ttf">
+            <string>Nagurigaki-Crayon</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UILabel_AttributedString" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center" translatesAutoresizingMaskIntoConstraints="NO" id="hUi-IT-I35">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzr-Su-GMi">
+                                <rect key="frame" x="8" y="362" width="359" height="88"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中英文不同字型小朋友請勿乱試" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-oT-RSx">
+                                <rect key="frame" x="20" y="247" width="335" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="cXv-Ls-cuM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nagurigaki-Crayon" family="Nagurigaki Crayon" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hUi-IT-I35" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4BV-g0-0Eh"/>
+                            <constraint firstAttribute="bottom" secondItem="hUi-IT-I35" secondAttribute="bottom" id="5OY-he-Pdx"/>
+                            <constraint firstItem="wzr-Su-GMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="E34-kK-xHA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wzr-Su-GMi" secondAttribute="trailing" constant="8" id="J0n-oS-sd4"/>
+                            <constraint firstItem="Cvo-oT-RSx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ndv-dh-sMI"/>
+                            <constraint firstItem="wzr-Su-GMi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TrE-8g-XG7"/>
+                            <constraint firstItem="wzr-Su-GMi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WUu-1q-Qts"/>
+                            <constraint firstItem="hUi-IT-I35" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b11-OK-epN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cvo-oT-RSx" secondAttribute="trailing" constant="20" id="lnm-Yc-tmj"/>
+                            <constraint firstItem="wzr-Su-GMi" firstAttribute="top" secondItem="Cvo-oT-RSx" secondAttribute="bottom" constant="30" id="rLG-fq-v7N"/>
+                            <constraint firstItem="hUi-IT-I35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xSz-C1-uS2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTextField" destination="wzr-Su-GMi" id="bjo-im-3cG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="center" width="780" height="1103"/>
+    </resources>
+</document>

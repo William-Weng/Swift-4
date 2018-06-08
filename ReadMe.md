@@ -17,3 +17,6 @@
 
 ## Unicode_Emoji - 利用Unicode組合出顏文字
 ![Unicode_Emoji - 利用Unicode產生出顏文字](./_Gif_/Unicode_Emoji.gif)
+
+## UILabel_AttributedString - 利用NSAttributed組合出中英文各一種字型
+![UILabel_AttributedString - 利用NSAttributed組合出中英文各一種字型](./_Gif_/UILabel_AttributedString.gif)
