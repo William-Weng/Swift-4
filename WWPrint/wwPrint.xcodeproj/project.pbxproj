@@ -12,7 +12,7 @@
 		642F4CD020D211AE0069D9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F4CCE20D211AE0069D9DF /* Main.storyboard */; };
 		642F4CD220D211AE0069D9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642F4CD120D211AE0069D9DF /* Assets.xcassets */; };
 		642F4CD520D211AE0069D9DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F4CD320D211AE0069D9DF /* LaunchScreen.storyboard */; };
-		642F4CDD20D212240069D9DF /* wwPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F4CDC20D212240069D9DF /* wwPrint.swift */; };
+		642F4CDD20D212240069D9DF /* WWPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F4CDC20D212240069D9DF /* WWPrint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		642F4CD120D211AE0069D9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642F4CD420D211AE0069D9DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		642F4CD620D211AE0069D9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		642F4CDC20D212240069D9DF /* wwPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwPrint.swift; sourceTree = "<group>"; };
+		642F4CDC20D212240069D9DF /* WWPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWPrint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				642F4CCA20D211AE0069D9DF /* AppDelegate.swift */,
-				642F4CDC20D212240069D9DF /* wwPrint.swift */,
+				642F4CDC20D212240069D9DF /* WWPrint.swift */,
 				642F4CCC20D211AE0069D9DF /* ViewController.swift */,
 				642F4CCE20D211AE0069D9DF /* Main.storyboard */,
 				642F4CD120D211AE0069D9DF /* Assets.xcassets */,
@@ -141,7 +141,7 @@
 			files = (
 				642F4CCD20D211AE0069D9DF /* ViewController.swift in Sources */,
 				642F4CCB20D211AE0069D9DF /* AppDelegate.swift in Sources */,
-				642F4CDD20D212240069D9DF /* wwPrint.swift in Sources */,
+				642F4CDD20D212240069D9DF /* WWPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

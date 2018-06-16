@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wwPrint.verbose("verbose")
-        wwPrint.debug("debug")
-        wwPrint.info("info")
-        wwPrint.warning("warning")
-        wwPrint.error("error")
+        WWPrint.verbose("verbose")
+        WWPrint.debug("debug")
+        WWPrint.info("info")
+        WWPrint.warning("warning")
+        WWPrint.error("error")
     }
 
     override func didReceiveMemoryWarning() {

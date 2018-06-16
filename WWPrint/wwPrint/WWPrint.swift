@@ -9,7 +9,7 @@
 import UIKit
 
 /// 自定義的Print
-public class wwPrint: UIViewController {
+public class WWPrint {
     
     static func verbose<T>(_ msg: T) { wwPrint(msg, logType: .verbose) }
     static func debug<T>(_ msg: T) { wwPrint(msg, logType: .debug) }
@@ -18,7 +18,7 @@ public class wwPrint: UIViewController {
     static func error<T>(_ msg: T) { wwPrint(msg, logType: .error) }
 }
 
-extension wwPrint {
+extension WWPrint {
     
     private enum logType: String {
         case verbose = "✅"
@@ -29,8 +29,6 @@ extension wwPrint {
     }
     
     private static func wwPrint<T>(_ msg: T, file: String = #file, method: String = #function, line: Int = #line, logType: logType = .verbose) {
-        #if DEBUG
-            Swift.print("🚩 \((file as NSString).lastPathComponent)：\(line) - \(method) \n\t \(logType.rawValue) \(msg)")
-        #endif
+        Swift.print("🚩 \((file as NSString).lastPathComponent)：\(line) - \(method) \n\t \(logType.rawValue) \(msg)")
     }
 }
