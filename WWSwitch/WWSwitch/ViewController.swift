@@ -19,7 +19,7 @@ enum SwitchDirection: Int {
     
     /// 設定Switch的背景色
     func color() -> UIColor {
-        let colors = [#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)]; return colors[self.rawValue]
+        let colors = [#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)]; return colors[self.rawValue]
     }
     
     /// 設定View的背景色
@@ -69,12 +69,8 @@ extension ViewController {
         var nextSwitchInfo: SwitchInfo = (CGPoint.zero, 0)
         
         switch direction {
-        case .left:
-            nextSwitchInfo = (switchBarRight.center, .pi)
-            switchButton.tag = SwitchDirection.right.rawValue
-        case .right:
-            nextSwitchInfo = (switchBarLeft.center, 0)
-            switchButton.tag = SwitchDirection.left.rawValue
+        case .left: nextSwitchInfo = (switchBarRight.center, .pi)
+        case .right: nextSwitchInfo = (switchBarLeft.center, 0)
         }
         
         return nextSwitchInfo
