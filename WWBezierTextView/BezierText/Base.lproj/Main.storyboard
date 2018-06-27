@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BezierText" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wo9-ZY-hqR">
+                                <rect key="frame" x="0.0" y="44" width="375" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ヽ( ° ▽°)ノ老皮!帥啊" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCv-3G-Qey">
+                                        <rect key="frame" x="16" y="25" width="296" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-LP-ZWb">
+                                        <rect key="frame" x="328" y="25" width="31" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="31" id="cuy-Bt-CKF"/>
+                                        </constraints>
+                                        <state key="normal" title="畫線"/>
+                                        <connections>
+                                            <action selector="writeText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xa2-K8-Pyh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bLh-LP-ZWb" firstAttribute="centerY" secondItem="Wo9-ZY-hqR" secondAttribute="centerY" id="Ajc-Gh-YbW"/>
+                                    <constraint firstItem="yCv-3G-Qey" firstAttribute="leading" secondItem="Wo9-ZY-hqR" secondAttribute="leading" constant="16" id="Cg1-gW-3Gx"/>
+                                    <constraint firstAttribute="height" constant="80" id="KmD-Dp-Yg0"/>
+                                    <constraint firstItem="yCv-3G-Qey" firstAttribute="centerY" secondItem="Wo9-ZY-hqR" secondAttribute="centerY" id="NEu-La-c5n"/>
+                                    <constraint firstAttribute="trailing" secondItem="bLh-LP-ZWb" secondAttribute="trailing" constant="16" id="Qyc-up-a3O"/>
+                                    <constraint firstItem="bLh-LP-ZWb" firstAttribute="leading" secondItem="yCv-3G-Qey" secondAttribute="trailing" constant="16" id="a7W-V5-zUR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91482986079999995" green="1" blue="0.75311093549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wo9-ZY-hqR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Fi-2C-qzP"/>
+                            <constraint firstItem="Wo9-ZY-hqR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DFn-gb-obB"/>
+                            <constraint firstItem="Wo9-ZY-hqR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OZ0-Cd-c7d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="yCv-3G-Qey" id="Mln-cS-jTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -23,3 +23,6 @@
 
 ## WWPrint - 有細節提示的Print
 ![WWPrint - 有細節提示的Print](./_Gif_/WWPrint.png)
+
+## WWBezierTextView - 將字串轉為貝茲曲線
+![WWBezierTextView - 將字串轉為貝茲曲線](./_Gif_/WWBezierTextView.gif)
