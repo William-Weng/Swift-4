@@ -29,3 +29,6 @@
 
 ## WWTransitionAnimation - 簡單的轉場動畫
 ![WWTransitionAnimation - 簡單的轉場動畫](./_Gif_/WWTransitionAnimation.gif)
+
+## AlamofireResumeFromBreakPoint - 利用Alamofire做圖片斷點續傳
+![AlamofireResumeFromBreakPoint - 利用Alamofire做圖片斷點續傳](./_Gif_/AlamofireResumeFromBreakPoint.gif)
