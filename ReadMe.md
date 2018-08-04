@@ -32,3 +32,6 @@
 
 ## AlamofireResumeFromBreakPoint - 利用Alamofire做圖片斷點續傳
 ![AlamofireResumeFromBreakPoint - 利用Alamofire做圖片斷點續傳](./_Gif_/AlamofireResumeFromBreakPoint.gif)
+
+## PushNotificationWithP8 - 利用推播換頁
+![PushNotificationWithP8 - 利用推播換頁](./_Gif_/PushNotificationWithP8.gif)
