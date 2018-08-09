@@ -35,3 +35,6 @@
 
 ## PushNotificationWithP8 - 利用推播換頁
 ![PushNotificationWithP8 - 利用推播換頁](./_Gif_/PushNotificationWithP8.gif)
+
+## ImageDeleteShakeAnimation - 仿iOS圖標抖動、iOS刪除App效果
+![mageDeleteShakeAnimation - 仿iOS圖標抖動、iOS刪除App效果](./_Gif_/ImageDeleteShakeAnimation.gif)

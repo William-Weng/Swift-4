@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageDeleteShakeAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-i2-XF8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoZ-51-vZC">
+                                <rect key="frame" x="40" y="185.5" width="295" height="295"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFl-6t-Jnb">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="8Js-WB-TgS"/>
+                                            <constraint firstAttribute="width" secondItem="qFl-6t-Jnb" secondAttribute="height" id="aY6-Yy-5XR"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="close"/>
+                                        <connections>
+                                            <action selector="removeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bue-qy-Znh"/>
+                                        </connections>
+                                    </button>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crab" translatesAutoresizingMaskIntoConstraints="NO" id="uzo-3c-tQS">
+                                        <rect key="frame" x="20" y="19.5" width="255" height="256"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qFl-6t-Jnb" firstAttribute="leading" secondItem="XoZ-51-vZC" secondAttribute="leading" id="1bh-Q3-qi0"/>
+                                    <constraint firstItem="uzo-3c-tQS" firstAttribute="leading" secondItem="XoZ-51-vZC" secondAttribute="leading" constant="20" id="Asp-xz-bH0"/>
+                                    <constraint firstAttribute="bottom" secondItem="uzo-3c-tQS" secondAttribute="bottom" constant="20" id="EBA-Kw-5Mx"/>
+                                    <constraint firstItem="qFl-6t-Jnb" firstAttribute="top" secondItem="XoZ-51-vZC" secondAttribute="top" id="MNb-AF-qlC"/>
+                                    <constraint firstAttribute="width" secondItem="XoZ-51-vZC" secondAttribute="height" id="QrH-ib-eHu"/>
+                                    <constraint firstItem="uzo-3c-tQS" firstAttribute="top" secondItem="XoZ-51-vZC" secondAttribute="top" constant="20" id="cNJ-ix-sVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="uzo-3c-tQS" secondAttribute="trailing" constant="20" id="uZO-9P-fJJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UrD-i2-XF8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4lg-Kw-8V6"/>
+                            <constraint firstItem="UrD-i2-XF8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6yb-DT-Bdw"/>
+                            <constraint firstItem="UrD-i2-XF8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GDH-7D-fUb"/>
+                            <constraint firstItem="UrD-i2-XF8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ou9-Gq-eUj"/>
+                            <constraint firstItem="XoZ-51-vZC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SQC-XK-SWz"/>
+                            <constraint firstItem="XoZ-51-vZC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SqF-vf-6qz"/>
+                            <constraint firstItem="XoZ-51-vZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="oN4-wR-Fkh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XoZ-51-vZC" secondAttribute="trailing" constant="40" id="snS-pj-STf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="qFl-6t-Jnb" id="8Tu-zM-0B4"/>
+                        <outlet property="myBaseView" destination="XoZ-51-vZC" id="ZUN-7t-S7g"/>
+                        <outlet property="myImageView" destination="uzo-3c-tQS" id="sTU-Lg-rky"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="32" height="32"/>
+        <image name="crab" width="256" height="256"/>
+        <image name="sea" width="438" height="350"/>
+    </resources>
+</document>
