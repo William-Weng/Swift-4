@@ -38,3 +38,6 @@
 
 ## ImageDeleteShakeAnimation - 仿iOS圖標抖動、iOS刪除App效果
 ![mageDeleteShakeAnimation - 仿iOS圖標抖動、iOS刪除App效果](./_Gif_/ImageDeleteShakeAnimation.gif)
+
+## WWSegmentControl - 自定義的SegmentControl
+![WWSegmentControl - 自定義的SegmentControl](./_Gif_/WWSegmentControl.gif)
