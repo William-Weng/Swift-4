@@ -44,3 +44,8 @@
 
 ## UITabBarWithCustomButton - UITabBar加上自訂按鈕
 ![UITabBarWithCustomButton - UITabBar加上自訂按鈕](./_Gif_/UITabBarWithCustomButton.gif)
+
+
+## WWCaReplicatorLayer - CAReplicatorLayer自訂Loading動畫
+![WWCaReplicatorLayer - CAReplicatorLayer自訂Loading動畫](./_Gif_/WWCaReplicatorLayer.gif)
+
