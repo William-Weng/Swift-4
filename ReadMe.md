@@ -49,3 +49,6 @@
 ## WWCaReplicatorLayer - CAReplicatorLayer自訂Loading動畫
 ![WWCaReplicatorLayer - CAReplicatorLayer自訂Loading動畫](./_Gif_/WWCaReplicatorLayer.gif)
 
+## VisualEffectView - 利用UIVisualEffectView做出模糊背景
+![VisualEffectView - 利用UIVisualEffectView做出模糊背景](./_Gif_/VisualEffectView.gif)
+
