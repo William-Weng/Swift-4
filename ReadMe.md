@@ -52,3 +52,6 @@
 ## VisualEffectView - 利用UIVisualEffectView做出模糊背景
 ![VisualEffectView - 利用UIVisualEffectView做出模糊背景](./_Gif_/VisualEffectView.gif)
 
+## WWTableViewPuttingCollectionView - TableView內加上CollectionView
+![WWTableViewPuttingCollectionView - TableView內加上CollectionView](./_Gif_/WWTableViewPuttingCollectionView.gif)
+
