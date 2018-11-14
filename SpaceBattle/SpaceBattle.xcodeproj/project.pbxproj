@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D8F990321991856009F3A1C /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F990221991856009F3A1C /* GameHelper.swift */; };
-		3D8F9905219924E2009F3A1C /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F9904219924E2009F3A1C /* WinScene.sks */; };
-		3D8F990921992566009F3A1C /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F990821992566009F3A1C /* WinScene.swift */; };
+		3D8F9905219924E2009F3A1C /* StartUpScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3D8F9904219924E2009F3A1C /* StartUpScene.sks */; };
+		3D8F990921992566009F3A1C /* StartUpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F990821992566009F3A1C /* StartUpScene.swift */; };
 		64527366214D318B00D73FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64527365214D318B00D73FAF /* AppDelegate.swift */; };
 		64527368214D318B00D73FAF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 64527367214D318B00D73FAF /* GameScene.sks */; };
 		6452736C214D318B00D73FAF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452736B214D318B00D73FAF /* GameScene.swift */; };
@@ -17,21 +17,22 @@
 		64527371214D318B00D73FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6452736F214D318B00D73FAF /* Main.storyboard */; };
 		64527373214D318D00D73FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64527372214D318D00D73FAF /* Assets.xcassets */; };
 		64527376214D318D00D73FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64527374214D318D00D73FAF /* LaunchScreen.storyboard */; };
-		64527383214D330600D73FAF /* spaceBattle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527380214D330600D73FAF /* spaceBattle.mp3 */; };
-		64527384214D330600D73FAF /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527381214D330600D73FAF /* explosion.mp3 */; };
-		64527385214D330600D73FAF /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527382214D330600D73FAF /* torpedo.mp3 */; };
+		64527383214D330600D73FAF /* SpaceBattle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527380214D330600D73FAF /* SpaceBattle.mp3 */; };
+		64527384214D330600D73FAF /* Explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527381214D330600D73FAF /* Explosion.mp3 */; };
+		64527385214D330600D73FAF /* Torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64527382214D330600D73FAF /* Torpedo.mp3 */; };
 		6452738B214D331C00D73FAF /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 64527387214D331C00D73FAF /* Explosion.sks */; };
 		6452738C214D331C00D73FAF /* ShootTrailRed.sks in Resources */ = {isa = PBXBuildFile; fileRef = 64527388214D331C00D73FAF /* ShootTrailRed.sks */; };
 		6452738D214D331C00D73FAF /* ExplosionBlue.sks in Resources */ = {isa = PBXBuildFile; fileRef = 64527389214D331C00D73FAF /* ExplosionBlue.sks */; };
 		6452738E214D331C00D73FAF /* ShootTrailBlue.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6452738A214D331C00D73FAF /* ShootTrailBlue.sks */; };
 		64527392214D332F00D73FAF /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64527390214D332F00D73FAF /* CGPoint+Extension.swift */; };
 		64527393214D332F00D73FAF /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64527391214D332F00D73FAF /* CGFloat+Extension.swift */; };
+		64842975219BD07000FDDA4F /* GameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64842974219BD07000FDDA4F /* GameConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D8F990221991856009F3A1C /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
-		3D8F9904219924E2009F3A1C /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
-		3D8F990821992566009F3A1C /* WinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		3D8F9904219924E2009F3A1C /* StartUpScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartUpScene.sks; sourceTree = "<group>"; };
+		3D8F990821992566009F3A1C /* StartUpScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpScene.swift; sourceTree = "<group>"; };
 		64527362214D318B00D73FAF /* SpaceBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64527365214D318B00D73FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64527367214D318B00D73FAF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -41,15 +42,16 @@
 		64527372214D318D00D73FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64527375214D318D00D73FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64527377214D318D00D73FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64527380214D330600D73FAF /* spaceBattle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spaceBattle.mp3; sourceTree = "<group>"; };
-		64527381214D330600D73FAF /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
-		64527382214D330600D73FAF /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		64527380214D330600D73FAF /* SpaceBattle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpaceBattle.mp3; sourceTree = "<group>"; };
+		64527381214D330600D73FAF /* Explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Explosion.mp3; sourceTree = "<group>"; };
+		64527382214D330600D73FAF /* Torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Torpedo.mp3; sourceTree = "<group>"; };
 		64527387214D331C00D73FAF /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		64527388214D331C00D73FAF /* ShootTrailRed.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShootTrailRed.sks; sourceTree = "<group>"; };
 		64527389214D331C00D73FAF /* ExplosionBlue.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionBlue.sks; sourceTree = "<group>"; };
 		6452738A214D331C00D73FAF /* ShootTrailBlue.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShootTrailBlue.sks; sourceTree = "<group>"; };
 		64527390214D332F00D73FAF /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		64527391214D332F00D73FAF /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		64842974219BD07000FDDA4F /* GameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,10 @@
 		3D8F9900219910FE009F3A1C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6452738F214D332F00D73FAF /* Utilites */,
 				3D8F99012199110C009F3A1C /* Scene */,
 				6452736D214D318B00D73FAF /* GameViewController.swift */,
+				64842974219BD07000FDDA4F /* GameConstant.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -92,8 +96,8 @@
 		3D8F99012199110C009F3A1C /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				3D8F9904219924E2009F3A1C /* WinScene.sks */,
-				3D8F990821992566009F3A1C /* WinScene.swift */,
+				3D8F9904219924E2009F3A1C /* StartUpScene.sks */,
+				3D8F990821992566009F3A1C /* StartUpScene.swift */,
 				64527367214D318B00D73FAF /* GameScene.sks */,
 				6452736B214D318B00D73FAF /* GameScene.swift */,
 			);
@@ -119,12 +123,11 @@
 		64527364214D318B00D73FAF /* SpaceBattle */ = {
 			isa = PBXGroup;
 			children = (
-				3D8F9900219910FE009F3A1C /* ViewController */,
-				3D8F98FF219910DE009F3A1C /* Storyboard */,
 				3D8F98FE219910A8009F3A1C /* Assets */,
-				6452738F214D332F00D73FAF /* Utilites */,
-				64527386214D331C00D73FAF /* Particles */,
 				6452737F214D330600D73FAF /* Sounds */,
+				3D8F98FF219910DE009F3A1C /* Storyboard */,
+				64527386214D331C00D73FAF /* Particles */,
+				3D8F9900219910FE009F3A1C /* ViewController */,
 				64527365214D318B00D73FAF /* AppDelegate.swift */,
 				64527377214D318D00D73FAF /* Info.plist */,
 			);
@@ -134,9 +137,9 @@
 		6452737F214D330600D73FAF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				64527380214D330600D73FAF /* spaceBattle.mp3 */,
-				64527381214D330600D73FAF /* explosion.mp3 */,
-				64527382214D330600D73FAF /* torpedo.mp3 */,
+				64527380214D330600D73FAF /* SpaceBattle.mp3 */,
+				64527381214D330600D73FAF /* Explosion.mp3 */,
+				64527382214D330600D73FAF /* Torpedo.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -224,13 +227,13 @@
 				64527371214D318B00D73FAF /* Main.storyboard in Resources */,
 				64527368214D318B00D73FAF /* GameScene.sks in Resources */,
 				64527373214D318D00D73FAF /* Assets.xcassets in Resources */,
-				3D8F9905219924E2009F3A1C /* WinScene.sks in Resources */,
-				64527384214D330600D73FAF /* explosion.mp3 in Resources */,
+				3D8F9905219924E2009F3A1C /* StartUpScene.sks in Resources */,
+				64527384214D330600D73FAF /* Explosion.mp3 in Resources */,
 				64527376214D318D00D73FAF /* LaunchScreen.storyboard in Resources */,
 				6452738E214D331C00D73FAF /* ShootTrailBlue.sks in Resources */,
 				6452738B214D331C00D73FAF /* Explosion.sks in Resources */,
-				64527385214D330600D73FAF /* torpedo.mp3 in Resources */,
-				64527383214D330600D73FAF /* spaceBattle.mp3 in Resources */,
+				64527385214D330600D73FAF /* Torpedo.mp3 in Resources */,
+				64527383214D330600D73FAF /* SpaceBattle.mp3 in Resources */,
 				6452738C214D331C00D73FAF /* ShootTrailRed.sks in Resources */,
 				6452738D214D331C00D73FAF /* ExplosionBlue.sks in Resources */,
 			);
@@ -244,9 +247,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6452736C214D318B00D73FAF /* GameScene.swift in Sources */,
+				64842975219BD07000FDDA4F /* GameConstant.swift in Sources */,
 				6452736E214D318B00D73FAF /* GameViewController.swift in Sources */,
 				64527392214D332F00D73FAF /* CGPoint+Extension.swift in Sources */,
-				3D8F990921992566009F3A1C /* WinScene.swift in Sources */,
+				3D8F990921992566009F3A1C /* StartUpScene.swift in Sources */,
 				64527366214D318B00D73FAF /* AppDelegate.swift in Sources */,
 				64527393214D332F00D73FAF /* CGFloat+Extension.swift in Sources */,
 				3D8F990321991856009F3A1C /* GameHelper.swift in Sources */,
@@ -396,7 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GXE4438K84;
 				INFOPLIST_FILE = SpaceBattle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GXE4438K84;
 				INFOPLIST_FILE = SpaceBattle/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

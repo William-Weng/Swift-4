@@ -21,12 +21,8 @@ class GameViewController: UIViewController {
         return true
     }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {        
+        return interfaceOrientations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,23 +34,39 @@ class GameViewController: UIViewController {
     }
 }
 
+// MARK: - 小工具
 extension GameViewController {
     
-    /// 遊戲畫面初始化設定
+    /// 遊戲畫面初始化設定 (設定大小跟啟動畫面)
     private func initGameView() {
         
-        guard let view = self.view as? SKView,
-              let scene = GameScene(fileNamed: "WinScene")
+        guard let view = view as? SKView,
+              let startUpScene = GameScene(fileNamed: GameConstant.Scene.startUp.rawValue),
+              let maxSize = Optional.some(CGSize.init(width: 1536, height: 2048))
         else {
             return
         }
-        
-        scene.scaleMode = .aspectFill
-        scene.size = CGSize.init(width: 1536, height: 2048)
 
-        view.presentScene(scene)
-        view.ignoresSiblingOrder = true
+        startUpScene.scaleMode = .aspectFill
+        startUpScene.size = maxSize
+
         view.showsFPS = true
         view.showsNodeCount = true
+        view.ignoresSiblingOrder = true
+        
+        view.presentScene(startUpScene)
+    }
+    
+    /// 支援旋轉的方向 (設備)
+    private func interfaceOrientations() -> UIInterfaceOrientationMask {
+        
+        let userInterfaceIdiom = UIDevice.current.userInterfaceIdiom
+        
+        switch userInterfaceIdiom {
+        case .phone:
+            return .allButUpsideDown
+        default:
+            return .all
+        }
     }
 }

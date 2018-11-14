@@ -7,21 +7,31 @@
 //
 /// [(一)宇宙大戰 Space Battle — 新建場景Scene、精靈節點、Particle粒子及背景音樂](http://www.ifiero.com/index.php/archives/126)
 /// [[原創]SpriteKit+Swift學習筆記（七）-簡述碰撞檢測](https://segmentfault.com/a/1190000002394575)
+/// [SKView｜Sprite Kit入門](http://spritekit.senchan-office.com/index.php/skview)
 
 import SpriteKit
+import GameplayKit
 
+// MARK: - 物體的相關代號
 struct PhysicsCategory {
     static let Player: UInt32 = 0x01 << 1
-    static let Alien: UInt32 = 0x01 << 2
+    static let Alien:  UInt32 = 0x01 << 2
     static let Bullet: UInt32 = 0x01 << 3
-    static let None: UInt32 = 0x01 << 4
+    static let None:   UInt32 = 0x01 << 4
 }
 
+// MARK: - 場景主體
 class GameScene: SKScene {
+    
+    /// 物體之間的碰撞關係
+    enum CollisionStatus {
+        case player_alien
+        case alien_bullet
+        case nothing
+    }
     
     private let gameHelper = GameHelper.shared
     
-    private var bg: SKSpriteNode!
     private var playerNode: SKSpriteNode!
     private var lastUpdateTimeInterval: TimeInterval = 0
     private var deltaTimeInterval: TimeInterval = 0
@@ -41,10 +51,10 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        setupPhysicsWorld()
+        physicsWorldSetting()
         initScoreLabel()
-        setupBackgroundMusic()
-        setupPlayer()
+        backgroundMusicSetting()
+        initPlayer()
         makeAliens(for: 0.6)
     }
     
@@ -67,70 +77,13 @@ class GameScene: SKScene {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        
-        let bodyA: SKPhysicsBody
-        let bodyB: SKPhysicsBody
-
-        if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
-            bodyA = contact.bodyA; bodyB = contact.bodyB
-        } else {
-            bodyA = contact.bodyB; bodyB = contact.bodyA
-        }
-
-        if (bodyA.categoryBitMask == PhysicsCategory.Player && bodyB.categoryBitMask == PhysicsCategory.Alien) {
-            gameOver(bodyA: bodyA.node as! SKSpriteNode, bodyB: bodyB.node as! SKSpriteNode)
-        }
-        
-        if (bodyA.categoryBitMask == PhysicsCategory.Alien && bodyB.categoryBitMask == PhysicsCategory.Bullet) {
-            hitAliens(bodyA: bodyA.node as! SKSpriteNode, bodyB: bodyB.node as! SKSpriteNode)
-        }
-    }
-}
-
-extension GameScene: SKPhysicsContactDelegate {
-    
-    /// 物理世界的相關設定
-    private func setupPhysicsWorld() {
-        physicsWorld.gravity = CGVector.init(dx: 0.0, dy: 0.0)
-        physicsWorld.contactDelegate = self
-    }
-
-    /// 背景音樂的設定
-    private func setupBackgroundMusic() {
-        let bgMusic = SKAudioNode.init(fileNamed: "spaceBattle.mp3")
-        bgMusic.autoplayLooped = true
-        
-        addChild(bgMusic)
-    }
-    
-    /// 飛機的設定
-    private func setupPlayer() {
-        
-        guard let _playerNode = childNode(withName: "playerNode") as? SKSpriteNode else { return }
-        
-        playerNode = _playerNode
-        
-        playerNode.physicsBody = SKPhysicsBody.init(texture: SKTexture.init(imageNamed: "Player"), size: SKTexture.init(imageNamed: "Player").size())
-        playerNode.physicsBody?.categoryBitMask = PhysicsCategory.Player
-        playerNode.physicsBody?.contactTestBitMask = PhysicsCategory.Alien
-        playerNode.physicsBody?.collisionBitMask = PhysicsCategory.None
-    }
-    
-    /// 加入分數的LabelNode
-    private func initScoreLabel() {
-        addChild(bestScoreLabel)
-        addChild(currentScoreLabel)
-    }
-    
-    /// 隨機產生敵機
-    private func makeAliens(for interval: TimeInterval) {
-        Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(spawnAlien), userInfo: nil, repeats: true)
+        playGame(contact)
     }
 }
 
 extension GameScene {
     
-    /// 敵人的設定
+    /// 產生敵人
     @objc private func spawnAlien() {
         
         let imageName = randomImageName()
@@ -160,19 +113,88 @@ extension GameScene {
         bullet.physicsBody?.categoryBitMask = PhysicsCategory.Bullet
         bullet.physicsBody?.contactTestBitMask = PhysicsCategory.Alien
         bullet.physicsBody?.collisionBitMask = PhysicsCategory.None
+        
         bullet.physicsBody?.usesPreciseCollisionDetection = true
         
         bullet.zPosition = 1
         bullet.position = spriteNode.position
         bullet.run(sequenceBulletAction(with: bullet))
         
-        bulletEffect(for: bullet, with: "ShootTrailBlue")
-        playSound(with: "torpedo.mp3")
+        bulletEffect(for: bullet, with: GameConstant.Effect.ShootTrailBlue.rawValue)
+        playSound(with: GameConstant.Sound.torpedo.rawValue)
         
         addChild(bullet)
     }
 }
 
+// MARK: - SKPhysicsContactDelegate
+extension GameScene: SKPhysicsContactDelegate {
+    
+    /// 物理世界的相關設定
+    private func physicsWorldSetting() {
+        physicsWorld.gravity = CGVector.init(dx: 0.0, dy: 0.0)
+        physicsWorld.contactDelegate = self
+    }
+}
+
+// MARK: - 小工具
+extension GameScene {
+    
+    /// 飛機的設定 (初始化)
+    private func initPlayer() {
+        
+        guard let _playerNode = childNode(withName: GameConstant.Node.player.rawValue) as? SKSpriteNode else { return }
+        
+        let playerTexture = SKTexture.init(imageNamed: "Player")
+        
+        playerNode = _playerNode
+        
+        playerNode.physicsBody = SKPhysicsBody.init(texture: playerTexture, size: playerTexture.size())
+        playerNode.zPosition = 2
+        
+        playerNode.physicsBody?.categoryBitMask = PhysicsCategory.Player
+        playerNode.physicsBody?.contactTestBitMask = PhysicsCategory.Alien
+        playerNode.physicsBody?.collisionBitMask = PhysicsCategory.None
+    }
+    
+    /// 背景音樂的設定
+    private func backgroundMusicSetting() {
+        
+        let bgMusic = SKAudioNode.init(fileNamed: GameConstant.Music.spaceBattle.rawValue)
+        bgMusic.autoplayLooped = true
+        
+        addChild(bgMusic)
+    }
+    
+    /// 加入分數的LabelNode
+    private func initScoreLabel() {
+        addChild(bestScoreLabel)
+        addChild(currentScoreLabel)
+    }
+    
+    /// 隨機產生敵機
+    private func makeAliens(for interval: TimeInterval) {
+        Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(spawnAlien), userInfo: nil, repeats: true)
+    }
+    
+    /// 測試遊戲物體碰撞後的處理方式
+    private func playGame(_ contact: SKPhysicsContact) {
+        
+        let (bodyA, bodyB) = physicsBodyMaskSort(contact)
+        let collisionStatus = bodyCollisionStatus(bodyA: bodyA, bodyB: bodyB)
+        
+        switch collisionStatus {
+        case .alien_bullet:
+            hitAliens(bodyA: bodyA.node as! SKSpriteNode, bodyB: bodyB.node as! SKSpriteNode)
+        case .player_alien:
+            gameOver(bodyA: bodyA.node as! SKSpriteNode, bodyB: bodyB.node as! SKSpriteNode)
+        case .nothing:
+            break
+        }
+    }
+}
+
+// MARK: - 小工具2
 extension GameScene {
     
     /// 完整的敵人動作路徑
@@ -205,7 +227,7 @@ extension GameScene {
         return SKAction.move(to: movePoint, duration: 0.5)
     }
     
-    /// 隨機產生位置
+    /// 隨機產生位置 (在畫面的左右邊)
     private func randomPosition(with frame: CGRect) -> CGPoint {
         
         let xPosition = CGFloat.random(min: -frame.size.width * 0.5, max: frame.size.width * 0.5)
@@ -222,20 +244,24 @@ extension GameScene {
     /// 隨機產生圖片名稱
     private func randomImageName() -> String {
         
-        let index = Int(CGFloat(arc4random()).truncatingRemainder(dividingBy: 2) + 1)
+        // let index = Int(CGFloat(arc4random()).truncatingRemainder(dividingBy: 2) + 1)
+        let index = GKRandomSource.sharedRandom().nextInt(upperBound: 2)
         let imageName = "Enemy0\(index)"
+        
+        print(index)
         
         return imageName
     }
     
-    /// 更新背景畫面 (兩個背景相互交換 -> 卷軸遊戲)
+    /// 更新背景畫面 (兩個同名的背景相互交換 -> 卷軸遊戲)
     private func updateBackground(delta daletaTimeInterval: TimeInterval) {
         
-        enumerateChildNodes(withName: "bgNode") { (node, _) in
+        enumerateChildNodes(withName: GameConstant.Node.background.rawValue) { (node, _) in
             
             guard let sprite = node as? SKSpriteNode else { return }
-            sprite.position.y -= CGFloat(self.deltaTimeInterval * 300)
-            if sprite.position.y < -self.frame.height { sprite.position.y += self.frame.height * 2 }
+            sprite.position.y -= CGFloat(self.deltaTimeInterval * GameConstant.gameSpeed)
+            
+            if (sprite.position.y < -self.frame.height) { sprite.position.y += self.frame.height * 2 }
         }
     }
     
@@ -247,7 +273,7 @@ extension GameScene {
         bodyA.physicsBody?.categoryBitMask = PhysicsCategory.None
         bodyA.removeFromParent()
         
-        emitterEffect(for: bodyA, with: "Explosion", isGameOver: isGameOver)
+        emitterEffect(for: bodyA, with: GameConstant.Effect.Explosion.rawValue, isGameOver: isGameOver)
     }
     
     /// 子彈擊中敵人後，敵人就88了，子彈也88了，分數++
@@ -256,8 +282,8 @@ extension GameScene {
         bodyA.physicsBody?.categoryBitMask = PhysicsCategory.None
         bodyA.removeFromParent()
         
-        emitterEffect(for: bodyA, with: "ExplosionBlue", isGameOver: isGameOver)
-        playSound(with: "explosion.mp3")
+        emitterEffect(for: bodyA, with: GameConstant.Effect.ExplosionBlue.rawValue, isGameOver: isGameOver)
+        playSound(with: GameConstant.Sound.explosion.rawValue)
         
         currentScore += 1
     }
@@ -276,7 +302,7 @@ extension GameScene {
         ])
         
         emitter.run(sequence) {
-            if (isGameOver) { self.gameHelper.transferScene(from: self, to: "WinScene") }
+            if (isGameOver) { self.gameHelper.transferScene(from: self, to: GameConstant.Scene.startUp.rawValue) }
         }
     }
     
@@ -304,7 +330,7 @@ extension GameScene {
               let previousLocation = Optional.some(touch.previousLocation(in: self)),
               let nowPositionX = Optional.some(playerNode.position.x + nowLocation.x - previousLocation.x)
         else {
-            return 0.0
+            return 0
         }
         
         return nowPositionX
@@ -341,5 +367,29 @@ extension GameScene {
     private func playSound(with sound: String) {
         let bulletSound = SKAction.playSoundFileNamed(sound, waitForCompletion: false)
         run(bulletSound)
+    }
+    
+    /// 測試物體之間的碰撞關係
+    private func bodyCollisionStatus(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) -> CollisionStatus {
+        
+        if (bodyA.categoryBitMask == PhysicsCategory.Player && bodyB.categoryBitMask == PhysicsCategory.Alien) { return .player_alien }
+        if (bodyA.categoryBitMask == PhysicsCategory.Alien && bodyB.categoryBitMask == PhysicsCategory.Bullet) { return .alien_bullet }
+        
+        return .nothing
+    }
+    
+    /// 將物體依照BitMask的大小排序 (小 -> 大)
+    private func physicsBodyMaskSort(_ contact: SKPhysicsContact) -> (SKPhysicsBody, SKPhysicsBody) {
+        
+        let bodyA: SKPhysicsBody
+        let bodyB: SKPhysicsBody
+        
+        if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
+            bodyA = contact.bodyA; bodyB = contact.bodyB
+        } else {
+            bodyA = contact.bodyB; bodyB = contact.bodyA
+        }
+        
+        return (bodyA, bodyB)
     }
 }
