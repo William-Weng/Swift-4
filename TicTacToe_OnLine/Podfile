@@ -6,7 +6,7 @@ target 'TicTacToe' do
   use_frameworks!
 
   # Pods for TicTacToe
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'PKHUD'
+  # pod 'Firebase/Core'
+  # pod 'Firebase/Database'
+  # pod 'PKHUD'
 end
