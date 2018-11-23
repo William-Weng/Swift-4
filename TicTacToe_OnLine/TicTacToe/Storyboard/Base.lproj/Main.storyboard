@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pyA-kD-39W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TicTacToe" translatesAutoresizingMaskIntoConstraints="NO" id="Zyw-gY-ZM2">
+                                <rect key="frame" x="20" y="238.66666666666663" width="335" height="335"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QMA-W9-lMf">
+                                <rect key="frame" x="20" y="238.66666666666663" width="335" height="335"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wg5-qG-b7p">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="111.66666666666667"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vy-HR-p7I" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9c-1O-2zt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V62-PD-QtC" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="111.66666666666666" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZwB-hB-sPS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-jh-fYR" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="223.33333333333334" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MYc-Bc-fYr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-As-xcJ">
+                                        <rect key="frame" x="0.0" y="111.66666666666666" width="335" height="111.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovc-nF-rRh" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFP-VM-TSm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQO-ye-73e" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="111.66666666666666" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJc-ev-zyy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3r-4T-yiM" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="223.33333333333334" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r44-fN-gfg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-Vy-WQL">
+                                        <rect key="frame" x="0.0" y="223.33333333333334" width="335" height="111.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCM-I5-ZXZ" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDZ-bg-sUz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySM-fj-AlV" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="111.66666666666666" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwq-pl-4sV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-Sq-tc7" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="223.33333333333334" y="0.0" width="111.66666666666666" height="111.66666666666667"/>
+                                                <connections>
+                                                    <action selector="clickedPiece:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgg-dk-plZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QMA-W9-lMf" secondAttribute="height" id="05l-sS-LWn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QMA-W9-lMf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0sK-vt-NTN"/>
+                            <constraint firstItem="Zyw-gY-ZM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AXx-1B-Ywt"/>
+                            <constraint firstAttribute="bottom" secondItem="pyA-kD-39W" secondAttribute="bottom" id="EG4-3P-1bd"/>
+                            <constraint firstItem="pyA-kD-39W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Eiw-LS-aLs"/>
+                            <constraint firstItem="QMA-W9-lMf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OQC-z7-KxG"/>
+                            <constraint firstItem="Zyw-gY-ZM2" firstAttribute="height" secondItem="QMA-W9-lMf" secondAttribute="height" id="Qd7-Kq-YGG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QMA-W9-lMf" secondAttribute="trailing" constant="20" id="e8m-ZM-1PE"/>
+                            <constraint firstItem="Zyw-gY-ZM2" firstAttribute="width" secondItem="QMA-W9-lMf" secondAttribute="width" id="ipp-Vi-lWl"/>
+                            <constraint firstItem="Zyw-gY-ZM2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mlp-S4-7el"/>
+                            <constraint firstItem="pyA-kD-39W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qHE-Zd-bOM"/>
+                            <constraint firstItem="pyA-kD-39W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t1k-At-GPf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="gamePieces" destination="3Vy-HR-p7I" collectionClass="NSMutableArray" id="45A-3i-HR4"/>
+                        <outletCollection property="gamePieces" destination="V62-PD-QtC" collectionClass="NSMutableArray" id="yq1-NN-3wa"/>
+                        <outletCollection property="gamePieces" destination="9vA-jh-fYR" collectionClass="NSMutableArray" id="dpN-yI-6mA"/>
+                        <outletCollection property="gamePieces" destination="ovc-nF-rRh" collectionClass="NSMutableArray" id="aUZ-5Z-Qum"/>
+                        <outletCollection property="gamePieces" destination="BQO-ye-73e" collectionClass="NSMutableArray" id="qc3-Ro-BqT"/>
+                        <outletCollection property="gamePieces" destination="V3r-4T-yiM" collectionClass="NSMutableArray" id="z4g-9x-aW8"/>
+                        <outletCollection property="gamePieces" destination="CCM-I5-ZXZ" collectionClass="NSMutableArray" id="ogy-KZ-Cot"/>
+                        <outletCollection property="gamePieces" destination="ySM-fj-AlV" collectionClass="NSMutableArray" id="VXU-Jp-bw5"/>
+                        <outletCollection property="gamePieces" destination="FgC-Sq-tc7" collectionClass="NSMutableArray" id="hiZ-VE-AFP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TicTacToe" width="780" height="750"/>
+    </resources>
+</document>
