@@ -62,5 +62,9 @@
 
 ## TicTacToe - 一個簡單的井字遊戲
 ![TicTacToe - 一個簡單的井字遊戲](./_Gif_/TicTacToe.gif)
+
 ## TicTacToe_OnLine - 一個簡單的井字遊戲 (連線對戰版)
 ![TicTacToe_OnLine - 一個簡單的井字遊戲(連線對戰版)](./_Gif_/TicTacToe_OnLine.gif)
+
+## Lottery - 抽籤的小工具
+![## Lottery - 抽籤的小工具](./_Gif_/Lottery.gif)
