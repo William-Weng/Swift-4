@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbI-0A-cbb">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PaintView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PaintView" customModule="PaintView" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackboard" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-xL-QGM">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-c5-w1W" customClass="PaintView" customModule="PaintView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6aF-c5-w1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G2z-o7-QrN"/>
+                            <constraint firstItem="C8R-xL-QGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Krg-eH-DDY"/>
+                            <constraint firstAttribute="bottom" secondItem="C8R-xL-QGM" secondAttribute="bottom" id="Lgn-L5-MHS"/>
+                            <constraint firstItem="C8R-xL-QGM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OnX-Vj-qsY"/>
+                            <constraint firstItem="6aF-c5-w1W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PIw-GK-OhX"/>
+                            <constraint firstItem="C8R-xL-QGM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SbH-aB-C97"/>
+                            <constraint firstAttribute="bottom" secondItem="6aF-c5-w1W" secondAttribute="bottom" id="gad-bU-vbE"/>
+                            <constraint firstItem="6aF-c5-w1W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="git-Iy-OoW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TfF-6s-X0i">
+                        <barButtonItem key="leftBarButtonItem" title="Draw" id="aC4-gF-tRL">
+                            <connections>
+                                <action selector="firebaseTest:" destination="BYZ-38-t0r" id="qm6-Zb-jw4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="2E9-en-u1G">
+                            <connections>
+                                <action selector="clearPaintView:" destination="BYZ-38-t0r" id="0X4-I1-BMW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myPaintView" destination="6aF-c5-w1W" id="57s-p7-hgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="133.00492610837438"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LWC-2B-81Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbI-0A-cbb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vh5-gb-seJ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kWl-qH-oJ8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QA-Do-MgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blackboard" width="315" height="138"/>
+    </resources>
+</document>
