@@ -67,7 +67,11 @@
 ![TicTacToe_OnLine - 一個簡單的井字遊戲(連線對戰版)](./_Gif_/TicTacToe_OnLine.gif)
 
 ## Lottery - 抽籤的小工具
-![## Lottery - 抽籤的小工具](./_Gif_/Lottery.gif)
+![Lottery - 抽籤的小工具](./_Gif_/Lottery.gif)
 
 ## PaintView - 簡易可連線的繪圖板
-![## PaintView - 簡易可連線的繪圖板](./_Gif_/PaintView.gif)
+![PaintView - 簡易可連線的繪圖板](./_Gif_/PaintView.gif)
+
+## TableViewHitTest - 利用hitTest讓TableView的背後按鍵可以被按
+![TableViewHitTest - 利用hitTest讓TableView的背後按鍵可以被按](./_Gif_/TableViewHitTest.gif)
+
