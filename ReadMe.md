@@ -75,3 +75,6 @@
 ## TableViewHitTest - 利用hitTest讓TableView的背後按鍵可以被按
 ![TableViewHitTest - 利用hitTest讓TableView的背後按鍵可以被按](./_Gif_/TableViewHitTest.gif)
 
+## HigherOrderFunction - 自定義高階函數
+![HigherOrderFunction - 自訂義高階函數](./_Gif_/HigherOrderFunction.png)
+
