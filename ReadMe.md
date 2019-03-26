@@ -78,3 +78,7 @@
 ## HigherOrderFunction - 自定義高階函數
 ![HigherOrderFunction - 自訂義高階函數](./_Gif_/HigherOrderFunction.png)
 
+## UITableViewPerformBatchUpdates - 利用Label的numberOfLines做出cell折疊的效果
+![UITableViewPerformBatchUpdates - 利用Label的numberOfLines做出cell折疊的效果](./_Gif_/UITableViewPerformBatchUpdates.gif)
+
+
