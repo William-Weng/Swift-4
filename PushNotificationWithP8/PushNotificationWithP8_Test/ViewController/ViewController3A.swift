@@ -8,13 +8,6 @@
 
 import UIKit
 
-class ViewController3A: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+final class ViewController3A: UIViewController {
+    override func viewDidLoad() { super.viewDidLoad() }
 }

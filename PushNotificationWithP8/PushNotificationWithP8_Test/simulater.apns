@@ -1,0 +1,15 @@
+{
+  "Simulator Target Bundle": "tw.idv.william.PushNotificationWithP8",
+  "aps": {
+    "alert": {
+      "title": "模擬器上的push",
+      "subtitle": "還滿好用的",
+      "body": "大家可以試看看"
+    }
+  },
+  "customInfo": {
+    "tab": 2,
+    "page": 1,
+    "item": 3
+  }
+}

@@ -8,22 +8,13 @@
 
 import UIKit
 
-class MyTabBarController: UITabBarController {
+final class MyTabBar: UITabBar {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    override public func sizeThatFits(_ size: CGSize) -> CGSize {
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-}
-
-extension UITabBar {
-    
-    override open func sizeThatFits(_ size: CGSize) -> CGSize {
         var sizeThatFits = super.sizeThatFits(size)
         sizeThatFits.height = 100
+
         return sizeThatFits
     }
 }

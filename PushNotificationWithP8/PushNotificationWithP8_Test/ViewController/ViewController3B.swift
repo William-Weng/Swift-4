@@ -8,14 +8,6 @@
 
 import UIKit
 
-class ViewController3B: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(navigationController?.viewControllers)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+final class ViewController3B: UIViewController {
+    override func viewDidLoad() { super.viewDidLoad() }
 }

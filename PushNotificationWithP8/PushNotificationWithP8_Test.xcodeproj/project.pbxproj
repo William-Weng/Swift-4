@@ -18,7 +18,8 @@
 		6429B2F720C0DCC400561B81 /* ViewController3B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6429B2F620C0DCC400561B81 /* ViewController3B.swift */; };
 		6429D4CF20BFCB8800548841 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6429D4CE20BFCB8800548841 /* ViewController3.swift */; };
 		6429D4D420BFCD7A00548841 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6429D4D320BFCD7A00548841 /* MyTabBarController.swift */; };
-		6429D4D720BFF85C00548841 /* BackgroundModes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6429D4D620BFF85C00548841 /* BackgroundModes.png */; };
+		6444750024C7CA8B00CA99AD /* simulater.apns in Resources */ = {isa = PBXBuildFile; fileRef = 644474FF24C7CA8B00CA99AD /* simulater.apns */; };
+		6490DADD24C698BD008AABFF /* BackgroundModes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6490DADC24C698BD008AABFF /* BackgroundModes.png */; };
 		8E6687CA62F3003CB9A578AF /* Pods_PushNotificationWithP8_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3DB320EBD8A38F77D23560 /* Pods_PushNotificationWithP8_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,8 @@
 		6429B2F620C0DCC400561B81 /* ViewController3B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3B.swift; sourceTree = "<group>"; };
 		6429D4CE20BFCB8800548841 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		6429D4D320BFCD7A00548841 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
-		6429D4D620BFF85C00548841 /* BackgroundModes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundModes.png; sourceTree = "<group>"; };
+		644474FF24C7CA8B00CA99AD /* simulater.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simulater.apns; sourceTree = "<group>"; };
+		6490DADC24C698BD008AABFF /* BackgroundModes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundModes.png; sourceTree = "<group>"; };
 		CB95F7C3F80713020160F8B5 /* Pods-PushNotificationWithP8_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationWithP8_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotificationWithP8_Test/Pods-PushNotificationWithP8_Test.release.xcconfig"; sourceTree = "<group>"; };
 		E51889DC7CEFCA19B6129B3D /* Pods-PushNotificationWithP8_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationWithP8_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotificationWithP8_Test/Pods-PushNotificationWithP8_Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,11 +95,11 @@
 		6401E9A120BF8BD800AB42CA /* PushNotificationWithP8_Test */ = {
 			isa = PBXGroup;
 			children = (
-				6429D4D520BFD0D000548841 /* Others */,
+				64AF348824C6935600BFAE09 /* Setting */,
+				64AF348724C6934000BFAE09 /* Storyboard */,
+				6429D4D520BFD0D000548841 /* Material */,
 				6429D4D020BFCB9500548841 /* ViewController */,
-				6401E9B420BF8C2100AB42CA /* PushNotificationWithP8_Test.entitlements */,
-				6401E9AE20BF8BD800AB42CA /* Info.plist */,
-				6429D4D620BFF85C00548841 /* BackgroundModes.png */,
+				6401E9A220BF8BD800AB42CA /* AppDelegate.swift */,
 			);
 			path = PushNotificationWithP8_Test;
 			sourceTree = "<group>";
@@ -105,7 +107,6 @@
 		6429D4D020BFCB9500548841 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6401E9A220BF8BD800AB42CA /* AppDelegate.swift */,
 				6429D4D320BFCD7A00548841 /* MyTabBarController.swift */,
 				6401E9A420BF8BD800AB42CA /* ViewController.swift */,
 				6401E9B720BFC48600AB42CA /* ViewController2.swift */,
@@ -116,15 +117,33 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		6429D4D520BFD0D000548841 /* Others */ = {
+		6429D4D520BFD0D000548841 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				6401E9A920BF8BD800AB42CA /* Assets.xcassets */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		64AF348724C6934000BFAE09 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				6401E9A620BF8BD800AB42CA /* Main.storyboard */,
-				6401E9A920BF8BD800AB42CA /* Assets.xcassets */,
 				6401E9AB20BF8BD800AB42CA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		64AF348824C6935600BFAE09 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6401E9AE20BF8BD800AB42CA /* Info.plist */,
+				6401E9B420BF8C2100AB42CA /* PushNotificationWithP8_Test.entitlements */,
+				6490DADC24C698BD008AABFF /* BackgroundModes.png */,
+				644474FF24C7CA8B00CA99AD /* simulater.apns */,
 				6401E9B520BFBC4000AB42CA /* apns.js */,
 			);
-			path = Others;
+			name = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,9 +216,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6444750024C7CA8B00CA99AD /* simulater.apns in Resources */,
 				6401E9B620BFBC4000AB42CA /* apns.js in Resources */,
 				6401E9AD20BF8BD800AB42CA /* LaunchScreen.storyboard in Resources */,
-				6429D4D720BFF85C00548841 /* BackgroundModes.png in Resources */,
+				6490DADD24C698BD008AABFF /* BackgroundModes.png in Resources */,
 				6401E9AA20BF8BD800AB42CA /* Assets.xcassets in Resources */,
 				6401E9A820BF8BD800AB42CA /* Main.storyboard in Resources */,
 			);
@@ -412,14 +432,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PushNotificationWithP8_Test/PushNotificationWithP8_Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GXE4438K84;
+				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				INFOPLIST_FILE = PushNotificationWithP8_Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.william.PushNotificationWithP8-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.william.PushNotificationWithP8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,14 +450,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PushNotificationWithP8_Test/PushNotificationWithP8_Test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GXE4438K84;
+				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				INFOPLIST_FILE = PushNotificationWithP8_Test/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.william.PushNotificationWithP8-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.william.PushNotificationWithP8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

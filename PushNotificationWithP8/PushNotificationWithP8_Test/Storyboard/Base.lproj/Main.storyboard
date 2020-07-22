@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hic-UN-CRh">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hic-UN-CRh">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -31,7 +29,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bFn-fx-fH7" customClass="ViewController2" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dWI-G4-SgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZBa-lT-1hI"/>
@@ -42,48 +40,48 @@
             </objects>
             <point key="canvasLocation" x="681" y="549"/>
         </scene>
-        <!--View Controller3-->
+        <!--我是第一頁-->
         <scene sceneID="Zwb-pB-OuC">
             <objects>
                 <viewController storyboardIdentifier="ViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c23-X4-x4t" customClass="ViewController3" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nf7-Sv-kn6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-ZM-pqr">
-                                <rect key="frame" x="102.5" y="293.5" width="169" height="79"/>
+                                <rect key="frame" x="75" y="366.66666666666669" width="225" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                <state key="normal" title="第二頁"/>
+                                <state key="normal" title="到第二頁"/>
                                 <connections>
                                     <segue destination="rgz-Yu-ViB" kind="show" identifier="VC3ASegue" id="H6f-Qi-JnU"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92705825389999996" green="0.24396982419999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WuG-ZM-pqr" firstAttribute="centerX" secondItem="nf7-Sv-kn6" secondAttribute="centerX" id="2kK-Oe-3Mv"/>
                             <constraint firstItem="WuG-ZM-pqr" firstAttribute="centerY" secondItem="nf7-Sv-kn6" secondAttribute="centerY" id="q5d-hA-kxE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dOW-7H-a1m"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HNA-0Z-77P"/>
+                    <navigationItem key="navigationItem" title="我是第一頁" id="HNA-0Z-77P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMn-ew-wfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681" y="1296"/>
         </scene>
-        <!--View Controller3A-->
+        <!--我是第二頁-->
         <scene sceneID="aQf-NE-sRd">
             <objects>
                 <viewController storyboardIdentifier="ViewController3A" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rgz-Yu-ViB" customClass="ViewController3A" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nsw-6x-QO6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GC-Rr-8y5">
-                                <rect key="frame" x="103" y="293.5" width="169" height="79"/>
+                                <rect key="frame" x="75" y="366.66666666666669" width="225" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                <state key="normal" title="第三頁"/>
+                                <state key="normal" title="到第三頁"/>
                                 <connections>
                                     <segue destination="mM3-jW-Blw" kind="show" identifier="VC3BSegue" id="UBz-EG-GbF"/>
                                 </connections>
@@ -96,21 +94,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lzb-uR-TWO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="我是第二頁" id="6nH-6Z-lGM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hV4-t9-xT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1597.5999999999999" y="1295.8020989505249"/>
         </scene>
-        <!--View Controller3B-->
+        <!--我是第三頁-->
         <scene sceneID="hTX-xi-uDf">
             <objects>
                 <viewController storyboardIdentifier="ViewController3B" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mM3-jW-Blw" customClass="ViewController3B" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SbX-Hy-GyQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ヽ(●´∀`●)ﾉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gy-zb-XDt">
-                                <rect key="frame" x="33" y="300" width="309" height="67"/>
+                                <rect key="frame" x="28.666666666666657" y="372.66666666666669" width="317.66666666666674" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,17 +122,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2FW-dy-aQ4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="我是第三頁" id="wve-wV-pKG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTO-iG-xxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2590" y="1296"/>
         </scene>
-        <!--My Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="jtb-7o-0Tr">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hic-UN-CRh" customClass="MyTabBarController" customModule="PushNotificationWithP8_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hic-UN-CRh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rk1-QT-9od">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rk1-QT-9od" customClass="MyTabBar" customModule="PushNotificationWithP8_Test" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,7 +155,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="lineChart" id="2vh-Ye-Uh7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CEO-98-HZe">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
